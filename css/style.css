@@ -1,0 +1,359 @@
+/* --- VARIABLES Y RESETEO GENERAL --- */
+:root {
+    --primary-color: #00ffff; /* Cian neón */
+    --secondary-color: #f72585; /* Rosa neón opcional */
+    --bg-color: #0a0a14; /* Fondo oscuro azulado */
+    --surface-color: rgba(23, 23, 39, 0.6); /* Color para las tarjetas */
+    --text-color: #e0e0e0;
+    --header-height: 70px;
+    --font-primary: 'Roboto', sans-serif;
+    --font-code: 'Fira Code', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.1), transparent 30%),
+        radial-gradient(circle at 80% 90%, rgba(247, 37, 133, 0.1), transparent 30%);
+    background-attachment: fixed;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.header {
+    background-color: rgba(10, 10, 20, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: var(--header-height);
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    font-family: var(--font-code);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* --- SECCIONES GENERALES --- */
+.content-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* --- SECCIÓN BIENVENIDA (HERO) --- */
+.welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.welcome-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.welcome-content .highlight {
+    color: var(--primary-color);
+}
+
+.welcome-content .subtitle {
+    font-family: var(--font-code);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    min-height: 2rem; /* para evitar saltos de layout mientras escribe */
+}
+
+/* --- BOTONES --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+
+/* --- SECCIÓN ACERCA DE MÍ --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* --- SECCIÓN PROYECTOS --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--surface-color);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags span {
+    background-color: rgba(0, 255, 255, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-family: var(--font-code);
+}
+
+/* --- SECCIÓN OBJETIVOS --- */
+.goals-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.goals-list li {
+    background: var(--surface-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.3s;
+}
+.goals-list li:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.goals-list i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* --- SECCIÓN CV Y LINKS --- */
+#cv, #links {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.social-link i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* --- SECCIÓN REFLEXIÓN --- */
+.reflection-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+.reflection-text p {
+    margin-bottom: 1rem;
+}
+.reflection-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+
+/* --- ADAPTACIÓN PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .welcome-content h1 {
+        font-size: 2.5rem;
+    }
+    .welcome-content .subtitle {
+        font-size: 1.2rem;
+    }
+    .nav-menu {
+        /* Aquí podrías implementar un menú de hamburguesa con JS, pero para simplificar, lo ocultamos. */
+        display: none; 
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
