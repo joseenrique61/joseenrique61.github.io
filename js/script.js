@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- ANIMACIÓN DE ESCRITURA PARA EL SUBTÍTULO ---
     const typingTextElement = document.getElementById('typing-text');
-    const textToType = "Estudiante de Ingeniería en Software | Desarrollador XR";
+    const textToType = "Estudiante de Ingeniería en Software";
     let index = 0;
 
     function type() {
         if (index < textToType.length) {
             typingTextElement.textContent += textToType.charAt(index);
             index++;
-            setTimeout(type, 80); // Velocidad de escritura
+            setTimeout(type, 70); // Velocidad de escritura
         }
     }
     type(); // Iniciar la animación al cargar la página

@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de José Cerezo</title>
     
-    <!-- Google Fonts: Una fuente moderna y una monoespaciada para el toque "tecno" -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Fira+Code&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome para iconos (GitHub, LinkedIn, etc.) -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Tu hoja de estilos -->
+    <!-- DEV ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,9 +28,10 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#about" class="nav-link">Acerca de mí</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li class="nav-item"><a href="#goals" class="nav-link">Objetivos</a></li>
-                <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li class="nav-item"><a href="#publications" class="nav-link">Publicaciones</a></li>
                 <li class="nav-item"><a href="#reflection" class="nav-link">Reflexión</a></li>
+                <li class="nav-item"><a href="#references" class="nav-link">Referencias</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +40,7 @@
         <!-- SECCIÓN 1: BIENVENIDA -->
         <section id="welcome" class="welcome-section">
             <div class="welcome-content">
-                <h1>Hola, soy <span class="highlight">José Enrique Cerezo Uzcategui</span></h1>
+                <h1>Hola, soy <span class="highlight">José Cerezo</span></h1>
                 <p class="subtitle" id="typing-text"></p> <!-- El texto se generará con JS -->
                 <a href="#projects" class="btn btn-primary">Ver mis Proyectos</a>
             </div>
@@ -47,92 +51,158 @@
             <h2 class="section-title">Acerca de mí</h2>
             <div class="about-container">
                 <div class="about-image">
-                    <img src="img/placeholder-profile.png" alt="Foto de perfil">
+                    <!-- Asegúrate de que esta imagen sea la de tu CV -->
+                    <img src="img/me.jpg" alt="Foto de José Cerezo">
                 </div>
                 <div class="about-text">
                     <p>
-                        Soy estudiante de 6to semestre de <strong>Ingeniería en Software</strong> en la <strong>Universidad de las Américas</strong>. Me apasiona el desarrollo de software, especialmente en áreas innovadoras como la Realidad Virtual y Aumentada.
+                        Soy estudiante de 6to semestre de <strong>Ingeniería en Software</strong> en la <strong>Universidad de las Américas</strong>, buscando activamente experiencia en el campo de la tecnología y el desarrollo de sistemas.
                     </p>
                     <p>
-                        En mi tiempo libre, disfruto de la lectura de ciencia ficción, explorar nuevos mundos en los videojuegos y mantenerme actualizado investigando las últimas tendencias tecnológicas. Creo firmemente que la tecnología puede ser una herramienta poderosa para la educación y el descubrimiento.
+                        Me apasiona la programación, la automatización y el desarrollo de software innovador. Mi experiencia en la pasantía me ha permitido trabajar con tecnologías de vanguardia como la Realidad Virtual y Aumentada, combinando mi interés por los videojuegos y la investigación para crear herramientas educativas de alto impacto.
                     </p>
                 </div>
             </div>
         </section>
         
-        <!-- SECCIÓN 3: TRABAJOS Y PROYECTOS -->
+        <!-- SECCIÓN 3: TRABAJOS Y PROYECTOS (EXPERIENCIA) -->
         <section id="projects" class="content-section animate-on-scroll">
-            <h2 class="section-title">Trabajos y Proyectos de la Pasantía</h2>
+            <h2 class="section-title">Experiencia y Proyectos</h2>
+            <div class="project-header">
+                <h3>Pasante como Desarrollador de Videojuegos</h3>
+                <p><strong>Universidad de las Américas</strong> | Diciembre 2023 - Mayo 2024</p>
+            </div>
             <div class="projects-grid">
                 <!-- Proyecto 1: VR -->
                 <div class="project-card">
-                    <img src="img/placeholder-vr.png" alt="Proyecto de Realidad Virtual" class="project-image">
+                    <img src="img/vr.png" alt="Proyecto de Realidad Virtual" class="project-image">
                     <div class="project-info">
                         <h3 class="project-title">Aprendizaje de Programación en Realidad Virtual</h3>
                         <p>
-                            <!-- Reemplaza esto con una descripción detallada -->
-                            Desarrollé un entorno de aprendizaje inmersivo para los Meta Quest, inspirado en Scratch. Los usuarios pueden aprender los fundamentos de la programación ensamblando bloques de código en un espacio 3D, lo que facilita la comprensión de conceptos como bucles, condicionales y variables de una manera kinestésica.
+                            Desarrollé un entorno de aprendizaje inmersivo para los Meta Quest, inspirado en Scratch. Los usuarios aprenden los fundamentos de la programación ensamblando bloques de código en un espacio 3D, facilitando la comprensión de conceptos de una manera kinestésica.
                         </p>
                         <div class="tags">
                             <span>Realidad Virtual</span>
                             <span>Unity</span>
                             <span>C#</span>
-                            <span>Meta Quest</span>
+                            <span>Meta Quest SDK</span>
                         </div>
                     </div>
                 </div>
                 <!-- Proyecto 2: AR -->
                 <div class="project-card">
-                    <img src="img/placeholder-ar.png" alt="Proyecto de Realidad Aumentada" class="project-image">
+                    <img src="img/ar.jpg" alt="Proyecto de Realidad Aumentada" class="project-image">
                     <div class="project-info">
                         <h3 class="project-title">Ensamblaje de PC en Realidad Aumentada</h3>
                         <p>
-                            <!-- Reemplaza esto con una descripción detallada -->
-                            Creé una aplicación móvil de Realidad Aumentada que enseña las partes de una computadora. Al escanear un marcador impreso (que diseñé), la app superpone un modelo 3D del hardware. Los usuarios pueden interactuar con las piezas, ver sus descripciones y "armar" una PC virtual en su propio escritorio.
+                            Creé una aplicación móvil de RA que enseña las partes de una computadora. Al escanear un marcador que diseñé, la app superpone un modelo 3D del hardware, permitiendo a los usuarios interactuar con las piezas y "armar" una PC virtual.
                         </p>
                         <div class="tags">
                             <span>Realidad Aumentada</span>
                             <span>Unity</span>
                             <span>AR Foundation</span>
-                            <span>Móvil</span>
+                            <span>Android/iOS</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 4: OBJETIVOS -->
-        <section id="goals" class="content-section animate-on-scroll">
-            <h2 class="section-title">Objetivos Profesionales</h2>
-            <ul class="goals-list">
-                <li><i class="fas fa-rocket"></i>Especializarme en el desarrollo de experiencias interactivas (XR).</li>
-                <li><i class="fas fa-code-branch"></i>Contribuir a proyectos de código abierto relacionados con la gamificación y la educación.</li>
-                <li><i class="fas fa-users"></i>Formar parte de un equipo que desarrolle software innovador y de alto impacto.</li>
-                <li><i class="fas fa-graduation-cap"></i>Continuar mi aprendizaje en áreas como inteligencia artificial y computación gráfica.</li>
-            </ul>
+        <!-- SECCIÓN 4: HABILIDADES (CONOCIMIENTOS) -->
+        <section id="skills" class="content-section animate-on-scroll">
+            <h2 class="section-title">Habilidades y Conocimientos</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+                    <div class="tags">
+                        <span><i class="devicon-python-plain"></i> Python (Avanzado)</span>
+                        <span><i class="devicon-csharp-plain"></i> C# (Avanzado)</span>
+                        <span><i class="devicon-bash-plain"></i> Bash (Intermedio)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Frameworks y Herramientas</h3>
+                    <div class="tags">
+                        <span><i class="devicon-dotnetcore-plain"></i> .NET Core</span>
+                        <span><i class="devicon-jetpackcompose-plain"></i> Jetpack Compose</span>
+                        <span>Avalonia UI</span>
+                        <span><i class="devicon-git-plain"></i> Git</span>
+                        <span><i class="devicon-docker-plain"></i> Docker (Básico)</span>
+                        <span>CI/CD (Básico)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div class="tags">
+                        <span><i class="devicon-microsoftsqlserver-plain"></i> SQL Server</span>
+                        <span><i class="devicon-sqlite-plain"></i> SQLite</span>
+                        <span><i class="devicon-mongodb-plain"></i> MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Sistemas Operativos</h3>
+                    <div class="tags">
+                        <span><i class="fab fa-linux"></i> Linux (Avanzado)</span>
+                        <span><i class="fab fa-windows"></i> Windows</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-language"></i> Idiomas</h3>
+                    <div class="language-skill">
+                        <span>Inglés</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
+                    </div>
+                    <div class="language-skill">
+                        <span>Español</span>
+                        <div class="progress-bar"><div class="progress" style="width: 100%;">Nativo</div></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Aptitudes</h3>
+                    <ul class="aptitudes-list">
+                        <li><i class="fas fa-check-circle"></i> Comunicación fluida</li>
+                        <li><i class="fas fa-check-circle"></i> Fácil adaptación</li>
+                        <li><i class="fas fa-check-circle"></i> Creatividad</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- SECCIÓN 5: CURRÍCULUM VITAE -->
-        <section id="cv" class="content-section animate-on-scroll">
-            <h2 class="section-title">Currículum Vitae</h2>
-            <p>Aquí puedes descargar mi CV completo para conocer más sobre mi formación académica y habilidades técnicas.</p>
-            <a href="docs/tu-cv.pdf" class="btn btn-secondary" download>
-                <i class="fas fa-download"></i> Descargar CV
-            </a>
+        <!-- SECCIÓN 5: PUBLICACIONES -->
+        <section id="publications" class="content-section animate-on-scroll">
+            <h2 class="section-title">Publicaciones</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <p>
+                        Criollo-C, S., <strong>Cerezo, J.</strong>, Guerrero-Arias, A., et al. (2024). Use of Virtual Reality as an Educational Tool: A Comparison Between Engineering Students and Teachers. <em>IEEE Access, 12</em>, 86662-86674.
+                    </p>
+                    <a href="https://doi.org/10.1109/ACCESS.2024.3416673" target="_blank" class="btn-link">
+                        Ver en IEEE Xplore <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="publication-item">
+                    <p>
+                        Criollo-C, S., <strong>Cerezo, J.</strong>, Guerrero-Arias, A., et al. (2024). Analysis of the Mental Workload Associated With the Use of Virtual Reality Technology as Support in the Higher Educational Model. <em>IEEE Access, 12</em>, 114370-114381.
+                    </p>
+                    <a href="https://doi.org/10.1109/ACCESS.2024.3445301" target="_blank" class="btn-link">
+                        Ver en IEEE Xplore <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
         </section>
         
         <!-- SECCIÓN 6: LINKS Y CONTACTO -->
         <section id="links" class="content-section animate-on-scroll">
-            <h2 class="section-title">Links</h2>
+            <h2 class="section-title">Contacto</h2>
             <div class="social-links">
-                <a href="https://github.com/[tu-usuario]" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i> GitHub
+                <a href="https://github.com/joseenrique61" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/[tu-usuario]" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
+                <a href="https://www.linkedin.com/in/jos%C3%A9-cerezo-a15841273/" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:[tu-email@correo.com]" class="social-link">
-                    <i class="fas fa-envelope"></i> Email
+                <a href="mailto:jose.cerezo@udla.edu.ec" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </section>
@@ -141,16 +211,24 @@
         <section id="reflection" class="content-section animate-on-scroll">
             <h2 class="section-title">Reflexión sobre la Pasantía</h2>
             <div class="reflection-text">
-                <p>
-                    <!-- Reemplaza este texto con tu reflexión personal -->
-                    Esta pasantía en el área de investigación de la universidad fue una experiencia transformadora. No solo me permitió aplicar los conocimientos teóricos de mis clases en proyectos prácticos y tangibles, sino que también me sumergió en el fascinante ciclo de vida del desarrollo de software XR.
-                </p>
-                <p>
-                    Técnicamente, aprendí a manejar el motor de videojuegos Unity a un nivel mucho más profundo, enfrentándome a los desafíos específicos del desarrollo para VR (optimización de rendimiento, interacciones intuitivas) y AR (tracking de marcadores, mapeo del mundo real). Trabajar con los Meta Quest y con AR Foundation me dio una base sólida en las tecnologías que definirán el futuro de la interacción digital.
-                </p>
-                <p>
-                    Más allá del código, la pasantía mejoró mis habilidades de resolución de problemas, comunicación y gestión de proyectos. Colaborar con el equipo de investigación para gamificar conceptos educativos me enseñó a traducir requerimientos complejos en experiencias de usuario atractivas y funcionales. Estoy muy agradecido por la oportunidad y motivado para seguir explorando este campo.
-                </p>
+                <p>Esta pasantía fue una experiencia transformadora. No solo me permitió aplicar los conocimientos teóricos en proyectos prácticos, sino que también me sumergió en el ciclo de vida del desarrollo de software XR. Aprendí a manejar Unity a un nivel mucho más profundo, enfrentándome a los desafíos específicos de VR y AR, lo que me dio una base sólida en tecnologías que definirán el futuro. Más allá del código, mejoré mis habilidades de resolución de problemas, comunicación y gestión de proyectos. Estoy muy agradecido por la oportunidad y motivado para seguir explorando este campo.</p>
+            </div>
+        </section>
+        
+        <!-- SECCIÓN 8: REFERENCIAS -->
+        <section id="references" class="content-section animate-on-scroll">
+            <h2 class="section-title">Referencias</h2>
+            <div class="references-grid">
+                <div class="reference-card">
+                    <h3>Luis Criollo</h3>
+                    <p>Profesor de Ingeniería en Software</p>
+                    <a href="mailto:luis.criollo@udla.edu.ec">luis.criollo@udla.edu.ec</a>
+                </div>
+                <div class="reference-card">
+                    <h3>Anita Yánez</h3>
+                    <p>Profesora de Ingeniería en Software</p>
+                    <a href="mailto:anita.yanez@udla.edu.ec">anita.yanez@udla.edu.ec</a>
+                </div>
             </div>
         </section>
     </main>
@@ -159,7 +237,7 @@
         <p>© 2024 - Creado por José Cerezo. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Script de JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
